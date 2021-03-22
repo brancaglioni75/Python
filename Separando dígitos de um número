@@ -1,0 +1,10 @@
+nro = int(input('Digite um número: '))
+u = nro // 1 % 10
+d = nro // 10 % 10
+c = nro // 100 % 10
+m = nro // 1000 % 10
+print('Analisando o número {}'.format(u))
+print('Unidade {}'.format(u))
+print('Dezena {}'.format(d))
+print('Centena {}'.format(c))
+print('Milhar {}'.format(m))
