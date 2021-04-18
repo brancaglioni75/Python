@@ -1,0 +1,13 @@
+from datetime import date
+atual = date.today().year
+nasc = int(input('Data de nascimento: '))
+anos = atual - nasc
+print('Quem nasceu no ano {} e tem {} no ano {}'.format(nasc, anos, atual))
+if anos == 18:
+    print('Você deve se alistar IMEDIATAMENTE')
+elif anos < 18:
+    saldo = 18 - anos
+    print('Ainda falta(m) {} anos para se alistar'.format(saldo))
+else:
+    saldo = anos - 18
+    print('Você já deveria ter se alistado')
