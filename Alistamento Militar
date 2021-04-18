@@ -1,8 +1,8 @@
-from datetime import date
-atual = date.today().year
+from datetime import date #Para esse exercício importamos a date da biblioteca datetime
+atual = date.today().year #date.today().year ou date.today().month
 nasc = int(input('Data de nascimento: '))
 anos = atual - nasc
-print('Quem nasceu no ano {} e tem {} no ano {}'.format(nasc, anos, atual))
+print('Quem nasceu no ano {} tem {} no ano {}'.format(nasc, anos, atual))
 if anos == 18:
     print('Você deve se alistar IMEDIATAMENTE')
 elif anos < 18:
