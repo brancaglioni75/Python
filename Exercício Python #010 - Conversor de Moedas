@@ -1,0 +1,6 @@
+'''Exercício Python 010: Crie um programa que leia
+quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.'''
+
+cart = float(input('Quanto dinheiro você tem na carteira? R$ '))
+dólar = 3.27
+print('Com R$ {} você pode comprar US$ {:.2f}'.format(cart, cart/dólar))
