@@ -1,7 +1,0 @@
-s = float(input('Qual o salário do funcionário? R$ '))
-if s <= 1250:
-    sal = s*1.15
-    print('Quem ganhava R$ {:.2f} passa a ganhar R$ {:.2f} agora.'.format(s, sal))
-else:
-    sal = s*1.10
-    print('Quem ganhava R$ {:.2f} passa a ganhar R$ {:.2f} agora.'.format(s, sal))
