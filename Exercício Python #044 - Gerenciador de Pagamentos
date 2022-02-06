@@ -1,0 +1,21 @@
+print('=-='*5, 'LOJAS BRANCAGLIONI', '=-='*5)
+preco = float(input('Preço das compras: R$ '))
+print('''FORMAS DE PAGAMENTO
+[ 1 ] à vista dinheito/cheque
+[ 2 ] à vista cartão
+[ 3 ] 2 x no cartão
+[ 4 ] 3 x ou mais no cartão''')
+opcao = int(input('Qual é a opção? '))
+desconto = preco * 0.95
+if opcao == 1:
+    print('Sua compra de {:.2f} vai custar {:.2f} com 5% de desconto'.format(preco, desconto))
+elif opcao == 2:
+    print('A sua compra de R$ {:.2f} será de R$ {:.2f} sem juros.'.format(preco, preco))
+elif opcao == 3:
+    totparcel = (preco + (preco * (2/100))) / 2
+    print('A sua compra de R$ {:.2f} será parcelado em 2 x de {:.2f} totalizando {:.2f} com 2% de juros'.format(preco, totparcel, totparcel*2))
+elif opcao == 4:
+    opcao = int(input('Quantas parcelas? '))
+    totparcel = (preco + (preco * 5/100)) / opcao
+else:
+    print('Opção Inválida! Tente Novamente!')
