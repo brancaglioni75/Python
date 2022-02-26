@@ -1,0 +1,51 @@
+from time import sleep
+def exibe_menu():
+    print('PROGRAMA CALCULADORA\n')
+    print('1 - Realizar Soma')
+    print('2 - Realizar Subtração')
+    print('3 - Realizar Divisão')
+    print('4 - Realizar Multiplicação')
+    print('5 - Sair')
+
+def inserir_dados():
+    global valor1
+    global valor2
+    valor1 = int(input('Digite o primeiro valor: '))
+    valor2 = int(input('Digite o segundo valor: '))
+
+def soma():
+    inserir_dados()
+    print('Realizando a soma entre {} e {} é igual a {}.\n'.format(valor1, valor2, (valor1+valor2)))
+
+def subtração():
+    inserir_dados()
+    print('Realizando a subtração entre {} e {} é igual a {}.\n'.format(valor1, valor2, (valor1-valor2)))
+
+def divisão():
+    inserir_dados()
+    print('Realizando a divisão entre {} e {} é igual a {}.\n'.format(valor1, valor2, (valor1/valor2)))
+
+def multiplicação():
+    inserir_dados()
+    print('Realizando a multiplicação entre {} e {} é igual a {}.\n'.format(valor1, valor2, (valor1*valor2)))
+
+opcao = 0
+while opcao != 5:
+    exibe_menu()
+    opcao = int(input('\nPor favor, escolha a opção: '))
+    if opcao == 1:
+        soma()
+        sleep(3)
+    elif opcao == 2:
+        subtração()
+        sleep(3)
+    elif opcao == 3:
+        divisão()
+        sleep(3)
+    elif opcao == 4:
+        multiplicação()
+        sleep(3)
+    elif opcao == 5:
+        print('\nFIM!\n')
+    else:
+        print('Opção Inválida! Tente Novamente!')
