@@ -1,0 +1,14 @@
+#Exercício Python 053: Crie um programa que leia uma frase qualquer e
+# diga se ela é um palíndromo, desconsiderando os espaços.
+
+frase = str(input('Digite uma frase: ')).upper().strip()
+palavras = frase.split() # Separa a frase digitada [palavra1, palavra2]
+junto = ''.join(palavras) # Junta as palavras tirando o espaço entre elas
+inverso = ''
+for letra in range(len(junto)-1, -1, -1): # Conta as palavras juntadas e as inverte
+    inverso = inverso + junto[letra] # A palavra invertida é colocada nessa variável
+print('O inverso de {} é {}'.format(junto, inverso))
+if inverso == junto:
+    print('Temos um palíndromo')
+else:
+    print('A frase não é um palíndromo')
