@@ -1,12 +1,27 @@
-guess = 0
-print('Welcome')
-while guess != 5:
-    g= input('Guess the number: ')
-    guess = int(g)
-    if guess == 5:
-        print('You win!')
-    if guess > 5:
-        print('too high')
-    if guess < 5:
-        print('too low')
-print('Game Over')
+# guess = 0
+# print('Welcome')
+# while guess != 5:
+#     g= input('Guess the number: ')
+#     guess = int(g)
+#     if guess == 5:
+#         print('You win!')
+#     if guess > 5:
+#         print('too high')
+#     if guess < 5:
+#         print('too low')
+# print('Game Over')
+
+from random import randint
+cont = 0
+print('\033[1;32m-\033[m'*20)
+print('JOGO DA ADVINHAÇÃO')
+print('\033[1;32m-\033[m'*20)
+while True:
+    computador = randint(1, 11)
+    jogador = int(input('Digite um número? '))
+    cont += 1
+    if jogador == computador:
+        print('Você venceu!')
+        break
+print(f'O computador jogou {computador} e o jogador jogou {jogador}.')
+print(f'Foram jogadas {cont} vezes.')
