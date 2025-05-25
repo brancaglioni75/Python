@@ -25,6 +25,6 @@ Organizei os arquivos por aula ou tema, facilitando a navegação e revisão do 
 Clone o repositório e execute os scripts com Python 3:
 
 ```bash
-git clone https://github.com/brancaglioni75/Curso-Python.git
-cd Curso-Python
+git clone https://github.com/brancaglioni75/Python.git
+cd Python
 python3 nome_do_arquivo.py
